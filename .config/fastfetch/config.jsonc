@@ -1,0 +1,58 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+   "display": {
+        "separator": "  "
+    },
+    "modules": [
+    {
+      "type": "command",
+      "key": "",
+      "text": "os_name=$(awk -F '\"' '{print $2}' /etc/os-release | head -n1); m_arch=$(uname -m); birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $os_name $m_arch \"(\"$days_difference days\")\""
+    },
+    {
+      "type": "command",
+      "key": "",
+      "text": "uname -sr"
+    },
+    {
+      "type": "command",
+      "key": "",
+      "text": "ps -p 1 -o comm=",
+    },
+    {
+      "type":  "uptime",
+      "key": "󰥔",
+    },
+   {
+     "type": "packages",
+     "key": "󰏖", 
+   },
+   {
+     "type": "shell",
+     "key": "󰈺",
+   },
+   {
+     "type": "de",
+     "key": "",
+   },
+   {
+     "type": "cpu",
+     "key": "",
+   },
+   { 
+     "type": "memory",
+     "key": "",
+   },
+   {
+     "type": "swap",
+     "key": "󰓡",
+   },
+   {
+     "type": "disk",
+     "key": "", 
+   },
+    "break",
+    "colors"
+  ]
+}
