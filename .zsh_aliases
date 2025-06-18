@@ -1,0 +1,1 @@
+alias installed="sudo dnf history list | grep -v -w "rm""
